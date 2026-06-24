@@ -30,9 +30,9 @@ La elección de estas cuatro vistas responde a la necesidad de evaluar y entende
 
 | Alternativa | Por qué la descarté |
 |-------------|---------------------|
-| **Modelo C4** | Resulta excesivamente detallado para el alcance actual de DevTask. Generar diagramas hasta el nivel de código (Nivel 4) consumiría tiempo de desarrollo valioso y generaría sobrecarga para un proyecto escolar. |
-| **Diagramas estáticos exportados desde Draw.io (PNG/JPEG)** | Dificulta el control de versiones. Si un compañero necesita cambiar una clase en un diagrama, requiere el archivo fuente original XML de Draw.io, modificarlo, re-exportar la imagen y hacer el commit, lo cual genera fricción. |
-| **UML Completo Tradicional** | Hacer diagramas de casos de uso, estados y secuencias para cada operación CRUD es demasiado burocrático y choca con el enfoque ágil establecido en el ADR-01. |
+| **Representación única mediante Diagrama de Clases** | Un solo diagrama estático de clases omitiría por completo el comportamiento dinámico de las peticiones en tiempo de ejecución y la distribución de la infraestructura, dejando vacíos críticos en la planificación del despliegue y la configuración de los servidores. |
+| **Modelado Ad-hoc sin vistas estándar** | Documentar el sistema mediante descripciones informales o diagramas libres genera ambigüedad. Al no separar las inquietudes de infraestructura (despliegue) de las inquietudes de diseño lógico, se incrementa el riesgo de introducir dependencias circulares durante la fase de codificación. |
+| **Modelo C4 Completo (Nivel 4 - Código)** | Aunque es un modelo basado en niveles, profundizar hasta el nivel de código detallado resulta excesivamente burocrático y redundante para el alcance actual de DevTask, consumiendo tiempo que debe asignarse a la implementación de las reglas de negocio. |
 
 ---
 
@@ -40,13 +40,13 @@ La elección de estas cuatro vistas responde a la necesidad de evaluar y entende
 
 **Lo que gano:**
 
-- **Consecuencia técnica:** La documentación se vuelve "viva" y versionable. Cualquier cambio en la arquitectura se puede ajustar modificando unas líneas de texto en Markdown, permitiendo revisiones de arquitectura directamente en los *Pull Requests* de GitHub.
-- **Consecuencia sobre el proceso/equipo:** Mejora la comunicación asíncrona. Los integrantes tienen referencias visuales claras de cómo las peticiones fluyen a través de los controladores, servicios y repositorios sin tener que descifrar el código fuente.
+- **Consecuencia técnica:** Mitigación de errores de diseño. Al validar el sistema desde cuatro frentes distintos, se garantiza que la separación de las 3 capas se mantenga intacta en el código, en la ejecución y en el servidor físico.
+- **Consecuencia sobre el proceso o el equipo:** Claridad y concordancia en el desarrollo. Cada sección del documento proporciona una guía directa para tareas específicas: la vista física guía la creación de archivos, la lógica guía las interfaces, la de procesos guía los controladores y la de despliegue guía el entorno de ejecución.
 
-**L que sacrifico o asumo:**
+**Lo que sacrifico o asumo:**
 
-- **Limitación técnica:** Mermaid ofrece un control estético y de diseño muy limitado en comparación con herramientas de lienzo libre como Draw.io. El auto-posicionamiento de los nodos a veces puede generar gráficos que ocupan mucho espacio vertical.
-- **Deuda o riesgo:** Mantenimiento continuo. A medida que se agreguen nuevas funcionalidades al To-Do list (por ejemplo, notificaciones o etiquetas), existe el riesgo de que el equipo modifique el código pero olvide actualizar los scripts de Mermaid, provocando que la documentación se desactualice.
+- **Limitación técnica:** Mayor esfuerzo de abstracción inicial. Documentar cuatro planos distintos de un mismo sistema requiere mantener la coherencia cruzada; un cambio en la lógica de las capas obliga a revisar la vista física y la de procesos para evitar inconsistencias.
+- **Deuda o riesgo:** Riesgo de desfase en la documentación. Si el sistema evoluciona (por ejemplo, añadiendo microservicios o colas de mensajería) y el equipo modifica el código sin actualizar las vistas correspondientes, el ADR perderá su valor como plano fidedigno de la arquitectura.
 
 ---
 
