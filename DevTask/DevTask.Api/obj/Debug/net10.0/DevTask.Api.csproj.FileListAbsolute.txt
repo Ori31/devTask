@@ -157,4 +157,4 @@
 /home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Api/obj/Debug/net10.0/DevTask.Api.genruntimeconfig.cache
 /home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Api/obj/Debug/net10.0/ref/DevTask.Api.dll
 /home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Api/bin/Debug/net10.0/DevTask.Api.staticwebassets.runtime.json
-/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Api/obj/Debug/net10.0/compressed/ojnca27j0t-{0}-7cp1c6eq7a-7cp1c6eq7a.gz
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Api/obj/Debug/net10.0/compressed/ojnca27j0t-{0}-l23kgdl73d-l23kgdl73d.gz
