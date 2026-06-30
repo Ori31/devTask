@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ori/RiderProjects/DevTask/DevTask/DevTask.csproj",
+      "projectUniqueName": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask/DevTask.csproj",
       "projectName": "DevTask",
-      "projectPath": "/home/ori/RiderProjects/DevTask/DevTask/DevTask.csproj",
+      "projectPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask/DevTask.csproj",
       "packagesPath": "/home/ori/.nuget/packages/",
-      "outputPath": "/home/ori/RiderProjects/DevTask/DevTask/obj/",
+      "outputPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ori/.nuget/NuGet/NuGet.Config"

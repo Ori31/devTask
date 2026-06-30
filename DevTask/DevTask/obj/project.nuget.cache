@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mp+o9bQSNKg=",
+  "dgSpecHash": "egPS/bbKOa8=",
   "success": true,
-  "projectFilePath": "/home/ori/RiderProjects/DevTask/DevTask/DevTask.csproj",
+  "projectFilePath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask/DevTask.csproj",
   "expectedPackageFiles": [
     "/home/ori/.nuget/packages/microsoft.aspnetcore.openapi/10.0.9/microsoft.aspnetcore.openapi.10.0.9.nupkg.sha512",
     "/home/ori/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"

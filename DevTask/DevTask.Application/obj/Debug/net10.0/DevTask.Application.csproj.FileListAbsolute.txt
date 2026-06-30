@@ -1,0 +1,16 @@
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/bin/Debug/net10.0/DevTask.Application.deps.json
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/bin/Debug/net10.0/DevTask.Application.dll
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/bin/Debug/net10.0/DevTask.Application.pdb
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/bin/Debug/net10.0/DevTask.Domain.dll
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/bin/Debug/net10.0/DevTask.Domain.pdb
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/DevTask.Application.csproj.AssemblyReference.cache
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/DevTask.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/DevTask.Application.AssemblyInfoInputs.cache
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/DevTask.Application.AssemblyInfo.cs
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/DevTask.Application.csproj.CoreCompileInputs.cache
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/DevTask.Application.sourcelink.json
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/DevTask..0670D00D.Up2Date
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/DevTask.Application.dll
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/refint/DevTask.Application.dll
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/DevTask.Application.pdb
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/Debug/net10.0/ref/DevTask.Application.dll

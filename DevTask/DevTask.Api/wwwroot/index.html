@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devTask - Tablero Personal</title>
+    <style id="base-styles">
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap');
+
+        :root {
+            --bg-outer: #c88796;      
+            --bg-inner: #d1ba9e;      
+            --header-bg: #994a5f;    
+            --border-color: #3b202d; 
+            --card-bg: #ffffff;      
+            --text-main: #000000;     
+            --accent-teal: #3d9d96;   
+        }
+
+        body {
+            background-color: var(--bg-outer);
+            color: var(--text-main);
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-weight: 700;
+        }
+
+        
+        .navbar {
+            background-color: var(--header-bg);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+
+            
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid var(--border-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .navbar .brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-links span {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .navbar-links span:hover { text-decoration: underline; }
+
+        
+        .main-container {
+            background-color: var(--bg-inner);
+            max-width: 1100px;
+            margin: 2rem auto;
+            border: 4px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: inset 0 0 0 2px rgba(0,0,0,0.05);
+        }
+
+        h2, h3 {
+            color: var(--accent-teal);
+            text-align: center;
+            margin-top: 0;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        
+        .box-card {
+            background-color: var(--card-bg);
+            border: 4px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .divider {
+            height: 2px;
+            background-color: var(--text-main);
+            width: 80%;
+            margin: 0.5rem auto 1.5rem auto;
+            border-radius: 2px;
+        }
+
+        input, textarea {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            background: #f0f0f0;
+            color: var(--text-main);
+            border: 2px solid var(--border-color);
+            padding: 0.6rem;
+            border-radius: 8px;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        input:focus { border-color: var(--accent-teal); }
+
+        button {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            cursor: pointer;
+            background: white;
+            color: var(--text-main);
+            border: 3px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            transition: transform 0.1s;
+        }
+
+        button:active { transform: scale(0.95); }
+        button:hover { background: #f0f0f0; }
+
+        .btn-primary {
+            background-color: var(--accent-teal);
+            color: white;
+        }
+        .btn-primary:hover { background-color: #31827c; }
+
+        .btn-danger { color: #d90429; border-color: #d90429; padding: 0.2rem 0.6rem; }
+        .btn-danger:hover { background: #d90429; color: white; }
+
+        .kanban-board {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 800px) {
+            .kanban-board { flex-direction: column; }
+        }
+
+        .kanban-col {
+            flex: 1;
+        }
+
+        .task-card {
+            background-color: var(--card-bg);
+            border: 4px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 0 var(--border-color);
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .task-title { font-size: 1.2rem; color: var(--accent-teal); }
+        .task-desc { font-size: 0.95rem; margin-bottom: 1rem; font-weight: 700; }
+
+        .task-actions {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .task-actions button { flex: 1; font-size: 0.85rem; padding: 0.4rem; }
+        
+        #cssEditorPanel {
+            display: none;
+            position: fixed;
+            bottom: 20px; right: 20px;
+            width: 350px;
+            background: var(--bg-inner);
+            border: 4px solid var(--border-color);
+            border-radius: 12px;
+            z-index: 20;
+            padding: 1rem;
+            box-shadow: 4px 4px 0 var(--border-color);
+        }
+
+        #cssEditorPanel textarea { height: 150px; }
+    </style>
+
+    <style id="live-styles"></style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="brand">
+        <span>devTask</span>
+    </div>
+    <div class="navbar-links">
+        <span>Tablero</span>
+        <span onclick="toggleCssEditor()">CSS Editor</span>
+    </div>
+</div>
+
+<div class="main-container">
+
+    <div class="box-card">
+        <h2>Crear Tarea</h2>
+        <div class="divider"></div>
+        <form id="taskForm" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start;">
+            <div style="flex: 1; min-width: 250px;">
+                <input type="text" id="title" placeholder="Título de la tarea" required>
+                <input type="text" id="description" placeholder="Descripción">
+            </div>
+            <button type="submit" class="btn-primary" style="height: 100%; padding: 1rem;">Agregar Tarea</button>
+        </form>
+    </div>
+
+    <div class="kanban-board">
+
+        <div class="kanban-col">
+            <div class="box-card" style="min-height: 300px; padding: 1rem;">
+                <h3>Por Hacer</h3>
+                <div class="divider" style="width: 100%;"></div>
+                <div id="col-todo"></div>
+            </div>
+        </div>
+
+        <div class="kanban-col">
+            <div class="box-card" style="min-height: 300px; padding: 1rem;">
+                <h3>En Proceso</h3>
+                <div class="divider" style="width: 100%;"></div>
+                <div id="col-inprogress"></div>
+            </div>
+        </div>
+
+        <div class="kanban-col">
+            <div class="box-card" style="min-height: 300px; padding: 1rem;">
+                <h3>Realizado</h3>
+                <div class="divider" style="width: 100%;"></div>
+                <div id="col-done"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="cssEditorPanel">
+    <h3 style="font-size: 1.2rem; color: var(--border-color);">Modificar Estilos</h3>
+    <textarea id="cssInput" placeholder="/* Escribe tu CSS aquí */"></textarea>
+    <div style="text-align: right;">
+        <button onclick="toggleCssEditor()">Cerrar</button>
+    </div>
+</div>
+
+<script>
+    const API_URL = 'http://localhost:5196/api/Tasks';
+
+    const cssInput = document.getElementById('cssInput');
+    const liveStyles = document.getElementById('live-styles');
+
+    function toggleCssEditor() {
+        const panel = document.getElementById('cssEditorPanel');
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    }
+
+    cssInput.addEventListener('input', () => {
+        liveStyles.textContent = cssInput.value;
+    });
+
+    async function fetchTasks() {
+        try {
+            const response = await fetch(API_URL);
+            if (!response.ok) throw new Error('Network error');
+            const tasks = await response.json();
+
+            document.getElementById('col-todo').innerHTML = '';
+            document.getElementById('col-inprogress').innerHTML = '';
+            document.getElementById('col-done').innerHTML = '';
+
+            tasks.forEach(task => {
+                const title = task.title || 'Sin título';
+                const desc = task.description || '';
+                const status = task.status || 0;
+                const taskId = task.id;
+
+                let actionBtns = '';
+                if (status === 0) {
+                    actionBtns = `<button onclick="moveTask('${taskId}', 1)">Empezar ➔</button>`;
+                } else if (status === 1) {
+                    actionBtns = `
+                            <button onclick="moveTask('${taskId}', 0)">🡨 Pausar</button>
+                            <button class="btn-primary" onclick="moveTask('${taskId}', 2)">Terminar ➔</button>
+                        `;
+                } else if (status === 2) {
+                    actionBtns = `<button onclick="moveTask('${taskId}', 1)">🡨 Reabrir</button>`;
+                }
+
+                const cardHtml = `
+                        <div class="task-card">
+                            <div class="task-header">
+                                <div class="task-title">${title}</div>
+                                <button class="btn-danger" onclick="deleteTask('${taskId}')" title="Eliminar tarea">✖</button>
+                            </div>
+                            <div class="task-desc">${desc}</div>
+                            <div class="task-actions">${actionBtns}</div>
+                        </div>
+                    `;
+
+                if (status === 0) document.getElementById('col-todo').innerHTML += cardHtml;
+                else if (status === 1) document.getElementById('col-inprogress').innerHTML += cardHtml;
+                else if (status === 2) document.getElementById('col-done').innerHTML += cardHtml;
+            });
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('col-todo').innerHTML = `<span style="color: red;">Error de conexión.</span>`;
+        }
+    }
+
+    document.getElementById('taskForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const newTask = {
+            title: document.getElementById('title').value,
+            description: document.getElementById('description').value
+        };
+
+        try {
+            await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newTask)
+            });
+            document.getElementById('taskForm').reset();
+            fetchTasks();
+        } catch (error) {
+            alert('No se pudo crear la tarea.');
+        }
+    });
+
+    async function moveTask(taskId, newStatus) {
+        try {
+            await fetch(`${API_URL}/${taskId}/move`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newStatus)
+            });
+            fetchTasks();
+        } catch (error) {
+            alert('Fallo al mover la tarea.');
+        }
+    }
+
+   
+    async function deleteTask(taskId) {
+        if (!confirm('¿Eliminar esta tarea definitivamente?')) return;
+
+        try {
+            const response = await fetch(`${API_URL}/${taskId}`, { method: 'DELETE' });
+            if (response.ok) fetchTasks();
+            else alert('Error al intentar eliminar la tarea.');
+        } catch (error) {
+            alert('Fallo al conectar con el servidor.');
+        }
+    }
+
+    fetchTasks();
+</script>
+</body>
+</html>

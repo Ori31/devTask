@@ -1,0 +1,12 @@
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/bin/Debug/net10.0/DevTask.Domain.deps.json
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/bin/Debug/net10.0/DevTask.Domain.dll
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/bin/Debug/net10.0/DevTask.Domain.pdb
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/obj/Debug/net10.0/DevTask.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/obj/Debug/net10.0/DevTask.Domain.AssemblyInfoInputs.cache
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/obj/Debug/net10.0/DevTask.Domain.AssemblyInfo.cs
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/obj/Debug/net10.0/DevTask.Domain.csproj.CoreCompileInputs.cache
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/obj/Debug/net10.0/DevTask.Domain.sourcelink.json
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/obj/Debug/net10.0/DevTask.Domain.dll
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/obj/Debug/net10.0/refint/DevTask.Domain.dll
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/obj/Debug/net10.0/DevTask.Domain.pdb
+/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/obj/Debug/net10.0/ref/DevTask.Domain.dll

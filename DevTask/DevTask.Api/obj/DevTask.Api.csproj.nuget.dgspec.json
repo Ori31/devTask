@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ori/RiderProjects/DevTask/DevTask.Api/DevTask.Api.csproj": {}
+    "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Api/DevTask.Api.csproj": {}
   },
   "projects": {
-    "/home/ori/RiderProjects/DevTask/DevTask.Api/DevTask.Api.csproj": {
+    "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Api/DevTask.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ori/RiderProjects/DevTask/DevTask.Api/DevTask.Api.csproj",
+        "projectUniqueName": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Api/DevTask.Api.csproj",
         "projectName": "DevTask.Api",
-        "projectPath": "/home/ori/RiderProjects/DevTask/DevTask.Api/DevTask.Api.csproj",
+        "projectPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Api/DevTask.Api.csproj",
         "packagesPath": "/home/ori/.nuget/packages/",
-        "outputPath": "/home/ori/RiderProjects/DevTask/DevTask.Api/obj/",
+        "outputPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ori/.nuget/NuGet/NuGet.Config"
@@ -24,10 +24,11 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/ori/RiderProjects/DevTask/DevTask.Infraestructure/DevTask.Infraestructure.csproj": {
-                "projectPath": "/home/ori/RiderProjects/DevTask/DevTask.Infraestructure/DevTask.Infraestructure.csproj"
+              "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Infraestructure/DevTask.Infraestructure.csproj": {
+                "projectPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Infraestructure/DevTask.Infraestructure.csproj"
               }
             }
           }
@@ -46,11 +47,26 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[10.2.3, )"
             }
           },
           "imports": [
@@ -490,14 +506,14 @@
         }
       }
     },
-    "/home/ori/RiderProjects/DevTask/DevTask.Application/DevTask.Application.csproj": {
+    "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/DevTask.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ori/RiderProjects/DevTask/DevTask.Application/DevTask.Application.csproj",
+        "projectUniqueName": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/DevTask.Application.csproj",
         "projectName": "DevTask.Application",
-        "projectPath": "/home/ori/RiderProjects/DevTask/DevTask.Application/DevTask.Application.csproj",
+        "projectPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/DevTask.Application.csproj",
         "packagesPath": "/home/ori/.nuget/packages/",
-        "outputPath": "/home/ori/RiderProjects/DevTask/DevTask.Application/obj/",
+        "outputPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ori/.nuget/NuGet/NuGet.Config"
@@ -510,10 +526,11 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/ori/RiderProjects/DevTask/DevTask.Domain/DevTask.Domain.csproj": {
-                "projectPath": "/home/ori/RiderProjects/DevTask/DevTask.Domain/DevTask.Domain.csproj"
+              "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/DevTask.Domain.csproj": {
+                "projectPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/DevTask.Domain.csproj"
               }
             }
           }
@@ -532,6 +549,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -827,14 +845,14 @@
         }
       }
     },
-    "/home/ori/RiderProjects/DevTask/DevTask.Domain/DevTask.Domain.csproj": {
+    "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/DevTask.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ori/RiderProjects/DevTask/DevTask.Domain/DevTask.Domain.csproj",
+        "projectUniqueName": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/DevTask.Domain.csproj",
         "projectName": "DevTask.Domain",
-        "projectPath": "/home/ori/RiderProjects/DevTask/DevTask.Domain/DevTask.Domain.csproj",
+        "projectPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/DevTask.Domain.csproj",
         "packagesPath": "/home/ori/.nuget/packages/",
-        "outputPath": "/home/ori/RiderProjects/DevTask/DevTask.Domain/obj/",
+        "outputPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ori/.nuget/NuGet/NuGet.Config"
@@ -847,6 +865,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -865,6 +884,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -1160,14 +1180,14 @@
         }
       }
     },
-    "/home/ori/RiderProjects/DevTask/DevTask.Infraestructure/DevTask.Infraestructure.csproj": {
+    "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Infraestructure/DevTask.Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ori/RiderProjects/DevTask/DevTask.Infraestructure/DevTask.Infraestructure.csproj",
+        "projectUniqueName": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Infraestructure/DevTask.Infraestructure.csproj",
         "projectName": "DevTask.Infraestructure",
-        "projectPath": "/home/ori/RiderProjects/DevTask/DevTask.Infraestructure/DevTask.Infraestructure.csproj",
+        "projectPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Infraestructure/DevTask.Infraestructure.csproj",
         "packagesPath": "/home/ori/.nuget/packages/",
-        "outputPath": "/home/ori/RiderProjects/DevTask/DevTask.Infraestructure/obj/",
+        "outputPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Infraestructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ori/.nuget/NuGet/NuGet.Config"
@@ -1180,10 +1200,11 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/ori/RiderProjects/DevTask/DevTask.Application/DevTask.Application.csproj": {
-                "projectPath": "/home/ori/RiderProjects/DevTask/DevTask.Application/DevTask.Application.csproj"
+              "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/DevTask.Application.csproj": {
+                "projectPath": "/home/ori/Documentos/Universidad/ArquitecturaSoftware/Proyecto/devTask/DevTask/DevTask.Application/DevTask.Application.csproj"
               }
             }
           }
@@ -1202,7 +1223,18 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
